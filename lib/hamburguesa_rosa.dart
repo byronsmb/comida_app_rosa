@@ -19,7 +19,7 @@ int currentIndex = 0;
 
 class _HamburguesaRosaState extends State<HamburguesaRosa> {
   String tipoComida = 'hamburguesa';
-  CarouselController _carouselController = CarouselController();
+  final CarouselController _carouselController = CarouselController();
 
   List<Comida> comidasFiltradas = comidaDisponible
       .where((comida) => comida.tipoAlimento.name == 'hamburguesa')
@@ -54,6 +54,13 @@ class _HamburguesaRosaState extends State<HamburguesaRosa> {
     });
   }
 
+  String textoMayuscula(String text) {
+    String primeraLetra = text.substring(0, 1).toUpperCase();
+    String textoRestante = text.substring(1);
+
+    return '$primeraLetra$textoRestante';
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,9 +72,9 @@ class _HamburguesaRosaState extends State<HamburguesaRosa> {
             onPressed: () => Scaffold.of(context).openDrawer(),
           ),
         ),
-        title: Text(''),
+        title: const Text(''),
       ),
-      drawer: NavigationDrawerWidget(),
+      drawer: const NavigationDrawerWidget(),
       body: Container(
         color: const Color(0xFFF7F6FF),
         child: Column(
@@ -176,7 +183,7 @@ class _HamburguesaRosaState extends State<HamburguesaRosa> {
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  'Hamburguesas',
+                  textoMayuscula(tipoComida),
                   style: GoogleFonts.outfit(),
                 ),
               ),

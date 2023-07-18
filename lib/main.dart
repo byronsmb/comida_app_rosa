@@ -12,7 +12,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-    
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
           backgroundColor: Color(0xFFF7F6FF),
@@ -21,8 +20,6 @@ class MyApp extends StatelessWidget {
           ),
         ),
         colorScheme: ColorScheme.fromSeed(
-          //brightness: Brightness.dark,
-
           seedColor: const Color.fromARGB(255, 27, 27, 27),
         ),
         textTheme: GoogleFonts.latoTextTheme(),
