@@ -1,3 +1,3 @@
 # comida_app_rosa
  
-![My Image](my-image.jpg)
+![My Image](preview.png)
