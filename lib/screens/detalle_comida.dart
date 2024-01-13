@@ -17,7 +17,7 @@ class DetalleComida extends StatelessWidget {
           Center(
             child: Text(
               comidaActual.nombre,
-              style: TextStyle(fontSize: 20),
+              style: const TextStyle(fontSize: 20),
             ),
           )
         ],
