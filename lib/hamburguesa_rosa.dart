@@ -117,6 +117,7 @@ class _HamburguesaRosaState extends State<HamburguesaRosa> {
                 ),
               ),
               const SizedBox(height: 10),
+              //Barra de busqueda
               Container(
                 width: MediaQuery.of(context).size.width - 60,
                 decoration: BoxDecoration(
@@ -142,7 +143,7 @@ class _HamburguesaRosaState extends State<HamburguesaRosa> {
               ),
               const SizedBox(height: 35),
               Expanded(
-                  child: resultadosBusqueda.length != 0 ||
+                  child: resultadosBusqueda.isNotEmpty ||
                           _titleController.text.isNotEmpty
                       ? ListaBusqueda(resultadosBusqueda: resultadosBusqueda)
                       : Column(

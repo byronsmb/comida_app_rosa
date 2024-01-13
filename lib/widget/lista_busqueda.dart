@@ -28,7 +28,7 @@ class ListaBusqueda extends StatelessWidget {
               leading: CircleAvatar(
                 backgroundImage: AssetImage(resultadosBusqueda[index].imagen),
                 backgroundColor:
-                    Color.fromARGB(255, 190, 61, 89).withOpacity(0.5),
+                    const Color.fromARGB(255, 190, 61, 89).withOpacity(0.5),
               ),
               title: Text(
                 resultadosBusqueda[index].nombre,
