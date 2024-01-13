@@ -1,3 +1,4 @@
+import 'package:comida_app_rosa/hamburguesa_rosa.dart';
 import 'package:flutter/material.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
@@ -24,12 +25,13 @@ class NavigationDrawerWidget extends StatelessWidget {
               title: const Text('Home'),
               //selected: _selectedIndex == 0,
               onTap: () {
-                Navigator.pop(context);
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const HamburguesaRosa(),
+                ));
               },
             ),
             ListTile(
               title: const Text('Business'),
-              //selected: _selectedIndex == 1,
               onTap: () {
                 Navigator.pop(context);
               },
