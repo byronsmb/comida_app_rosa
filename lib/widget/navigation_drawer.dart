@@ -16,7 +16,7 @@ class NavigationDrawerWidget extends StatelessWidget {
           children: [
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.blue,
+                color: Colors.pinkAccent,
               ),
               child: Text('Mis comidas'),
             ),
